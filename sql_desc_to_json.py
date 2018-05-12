@@ -46,7 +46,7 @@ for line in f:
                 break
             if char == '|':
                 count = count + 1
-            elif char.isalpha():
+            elif char.isalpha() or char.isdigit() or char == '_':
                 column_name = column_name + char
         output[table_name].append(column_name)
     line_number = line_number + 1
