@@ -6,19 +6,19 @@ import csv
 
 with open('example.csv', 'rb') as f:
     reader = csv.reader(f)
-    price_list = list(reader)
+    row_list = list(reader)
 
-new_price_list = []
-for price in price_list:
-    new_price = []
-    for p in price:
-        new_p = ""
-        if p.endswith(".0"):
-            new_p = p[:-2]
+new_row_list = []
+for row in row_list:
+    new_row = []
+    for r in row:
+        new_r = ""
+        if r.endswith(".0"):
+            new_r = r[:-2]
         else:
-            new_p = p
-        new_price.append(new_p)
-    new_price_list.append(new_price)
+            new_r = r
+        new_row.append(new_r)
+    new_row_list.append(new_row)
 
 writer = csv.writer(open('example_output.csv', 'w'))
-writer.writerows(new_price_list)
+writer.writerows(new_row_list)
