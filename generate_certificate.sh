@@ -1,3 +1,5 @@
+## This script will help you generate a self signed ssl tsl certificate.
+
 # This will generate the server key, asks to enter passphrase
 openssl genrsa -aes128 -out server.key 2048
 
